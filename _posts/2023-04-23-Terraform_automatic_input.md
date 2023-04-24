@@ -2,7 +2,7 @@
 title: Terraform automatic input
 date: 2023-04-23 17:00:00 -0000
 categories: [Terraform]
-tags: [aws, terraform, json]
+tags: [AWS, Terraform, json]
 ---
 
 # Terraform automatic inputs
