@@ -19,7 +19,7 @@ ext_ip=`curl -s https://freedns.afraid.org/dynamic/check.php | grep REMOTE_ADDR 
 echo "{ \"my_ip\" : \""$ext_ip"/32\" }"
 ```
 
-This just runs a curl to [freedns.afraid.org](freedns.afraid.org) and returns my network info, I'll use a grep and an awk to extract my IP address from that. The last line returns that IP address formatted as some json. Now I need to get Terraform to use it, to do that I'll add this to my *main.tf*.
+This just runs a curl to freedns.afraid.org and returns my network info, I'll use a grep and an awk to extract my IP address from that. The last line returns that IP address formatted as some json. Now I need to get Terraform to use it, to do that I'll add this to my *main.tf*.
 
 ```hcl
 data "external" "myip" {
