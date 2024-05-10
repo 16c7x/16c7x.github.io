@@ -1,8 +1,8 @@
 ---
-title: Configuring r10k
+title: Puppet 8 rediness with Onceover
 date: 2024-04-18 11:00:00 -0000
 categories: [Puppet Enterprise]
-tags: [Puppet, OSP, Onceover]
+tags: [Puppet, Open Source Puppet, Onceover, PE, OSP]
 ---
 
 # Puppet 8 readiness with Onceover
@@ -38,7 +38,7 @@ gem 'onceover', '~> 3.22'
 
 Run ```bundle install``` to install all the gems and their dependencies.
 
-Run ```bundle exec onceover init``` to initialise the control-repo, one of the things this does is create the .onceover directory and puts the Onceover config file, onceover.yaml into the spec directory.
+Run ```bundle exec onceover init``` to initialise the control-repo, one of the things this does is create the .onceover directory and puts the [Onceover](https://github.com/voxpupuli/onceover) config file, onceover.yaml into the spec directory.
 
 ### Run a test
 
@@ -60,7 +60,7 @@ class profile::coercion {
 }
 ```
 
-The last job is to modify the Onceover configutation file, to keep this simple I just want it to compile the example role on Ubuntu 20.04.
+The last job is to modify the [Onceover](https://github.com/voxpupuli/onceover) configutation file, to keep this simple I just want it to compile the example role on Ubuntu 20.04.
 
 ```
 classes:
@@ -116,4 +116,4 @@ Using [Onceover](https://github.com/voxpupuli/onceover) and the Puppet 8 Gem, we
 
 ## A note on Continuous Delivery for Puppet Enterprise (CD4PE)
 
-If you're using [Continuous Delivery](https://help.puppet.com/cdpe/) you're probably already using [Onceover](https://github.com/voxpupuli/onceover) on the [puppet-dev-tools:4.x](https://hub.docker.com/r/puppet/puppet-dev-tools/tags) container that ships with [Continuous Delivery](https://help.puppet.com/cdpe/). To start testing against Puppet 8, duplicate the Onceover job you're already running, but change the Docker container it uses to [puppet-dev-tools:puppet8](https://hub.docker.com/layers/puppet/puppet-dev-tools/puppet8/images/sha256-6da1c6cdde55a3b174a6042b0e724ce0340d146f616e4ea1853aee78d4e87677?context=explore)
+If you're using [Continuous Delivery](https://help.puppet.com/cdpe/) you're probably already using [Onceover](https://github.com/voxpupuli/onceover) on the [puppet-dev-tools:4.x](https://hub.docker.com/r/puppet/puppet-dev-tools/tags) container that ships with [Continuous Delivery](https://help.puppet.com/cdpe/). To start testing against Puppet 8, duplicate the [Onceover](https://github.com/voxpupuli/onceover) job you're already running, but change the Docker container it uses to [puppet-dev-tools:puppet8](https://hub.docker.com/layers/puppet/puppet-dev-tools/puppet8/images/sha256-6da1c6cdde55a3b174a6042b0e724ce0340d146f616e4ea1853aee78d4e87677?context=explore)
