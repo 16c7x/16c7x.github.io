@@ -1,6 +1,6 @@
 ---
 title: Puppet 8 rediness with Onceover
-date: 2024-04-18 11:00:00 -0000
+date: 2024-05-09 11:00:00 -0000
 categories: [Puppet Enterprise]
 tags: [Puppet, Open Source Puppet, Onceover, PE, OSP]
 ---
