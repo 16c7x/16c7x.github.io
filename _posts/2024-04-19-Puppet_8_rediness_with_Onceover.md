@@ -7,9 +7,16 @@ tags: [Puppet, Open Source Puppet, Onceover, PE, OSP]
 
 # Puppet 8 readiness with Onceover
 
+Puppet 8 has been released, with it comes security enhancements, the dropping of deprecated features, and performance improvements, you can read more about Puppet 8 on this [blog post](https://www.puppet.com/blog/puppet-8).
+
+In this blog post, well look at how you can take your existing Puppet 7 code and use [Onceover](https://github.com/voxpupuli/onceover), a free testing tool, to test it against Puppet 8 to prepare for your migration.
+
 ## Puppet 8
 
-Puppet 8 has been released, you can read more about it on this [blog post](https://www.puppet.com/blog/puppet-8). This post is going to focus on how you can start testing your existing Puppet 7 code against Puppet 8 to see where refactoring work is needed.
+Of the many changes to Puppet 8, a few will have a direct impact on your current Puppet code.
+Strict mode will now be enforced, for example, in Puppet 7 you could add a string to an integer, ```"1" + 1```, this will now fail.
+Legacy facts, which have been deprecated for some time, have been removed. 
+Hiera 3 has also been removed.
 
 ## Onceover
 
