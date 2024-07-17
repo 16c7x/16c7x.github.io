@@ -1,6 +1,6 @@
 ---
 title: Configuring LDAP in Puppet Enterprise
-date: 2024-07-19 11:00:00 -0000
+date: 2024-07-16 11:00:00 -0000
 categories: [Puppet Enterprise]
 tags: [Puppet, LDAP, PE]
 ---
