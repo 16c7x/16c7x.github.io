@@ -32,12 +32,12 @@ If you're on your own workstation you may want to consider using [rbenv](https:/
 
 The first step in installing [Onceover](https://github.com/voxpupuli/onceover) is to clone your control-repo onto your system.
 
-Then install install bundler ```gem install bundler``` this reads the Gemfile we'll produce in the next step to install the required Gems.
+Then install install bundler ```gem install bundler``` this is required to read the Gemfile we'll produce in the next step to install the required Gems.
 
 In the root of your control-repo create a Gemfile, this specifies the main Gems we want to install and their versions. If you wanted to use a different version of Puppet, just change the version in the Gemfile. If you host Gems internaly such as Artifatory, you can specify the source in here too.
 
 ```
-# Gemfileive 
+# Gemfile
 source "https://rubygems.org"
 gem 'puppet', '~> 8.4'
 gem 'onceover', '~> 3.22'
@@ -45,7 +45,7 @@ gem 'onceover', '~> 3.22'
 
 Run ```bundle install``` to install all the gems and their dependencies.
 
-Run ```bundle exec onceover init``` to initialise the control-repo, one of the things this does is create the .onceover directory and puts the [Onceover](https://github.com/voxpupuli/onceover) config file, onceover.yaml into the spec directory.
+Run ```bundle exec onceover init``` to initialise the control-repo, one of the things this does is create the .onceover directory and puts the [Onceover](https://github.com/voxpupuli/onceover) config file, onceover.yaml, into the spec directory.
 
 ### Run a test
 
@@ -61,7 +61,7 @@ class role::example {
 And that role will contain one profile, this profile contains some code that would compile a catalog under Puppet 7, but not under Puppet 8.
 
 ```
-# site-modules/profile/coercion.pp
+# site-modules/profile/manifests/coercion.pp
 class profile::coercion {
   $result = '1' + 1
 }
@@ -105,7 +105,7 @@ role::example: failed
 The error is reasonably clear, we provided a string and it was used as an integer. Lets fix that code!
 
 ```
-# site-modules/profile/coercion.pp
+# site-modules/profile/manifests/coercion.pp
 class profile::coercion {
   $result = 1 + 1
 }
